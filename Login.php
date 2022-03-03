@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="images/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="Img/favicon.png" type="image/x-icon">
 
     <title>Login</title>
 </head>
@@ -26,7 +26,7 @@
 
             </form>
         </div>
-        <img class="image-container" src="images/img/ut_log.png" alt="">
+        <img class="image-container" src="Img/ut_log.png" alt="">
     </div>
 
 </body>
