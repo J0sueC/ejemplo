@@ -41,7 +41,11 @@
                 <label>Celular</label>
                 <input type="text" class="input">
             </div>
+            <div class="inputfield">
+            <label>Cuentas con lugar para estadias?</label>
+            </div>
             <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                
                 <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" onclick="mostrar();">
                 <label class="btn btn-outline-primary" for="btnradio1">Si</label>
 
