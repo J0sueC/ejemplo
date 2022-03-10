@@ -13,13 +13,13 @@
 
     if(mysqli_num_rows($validar_login) > 0){
         $_SESSION['usuario'] = $correo;
-        header("location: ../inicio.php");
+        header("location: ../EncuestaI.php");
         exit();
     }else{
         echo ' 
             <script>
                 alert("Usuario no existe, favor de verificar los datos introducidos");
-                window.location = "index.php"
+                window.location = "Login.php"
             </script>
         ';
         exit();

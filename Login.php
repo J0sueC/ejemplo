@@ -1,34 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Fontawesome CDN Link -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Img/favicon.png" type="image/x-icon">
 
-    <title>Login</title>
 </head>
 
 <body>
-    <div class="login-container">
-        <div class="login-info-container">
-            <h1 class="title">Iniciar Sesión</h1>
-
-            <form action="login_usuario_be.php" method="POST" class="inputs-container">
-                <input class="input" type="text" placeholder="Usuario" name="correo">
-                <input class="input" type="password" placeholder="Contraseña" name="contrasena">
-
-                <button class="btn">Iniciar</button>
-
-
-            </form>
+    <div class="container">
+        <input type="checkbox" id="flip">
+        <div class="cover">
+            <div class="front">
+                <img src="Img/Utlogo.jpg" alt="" >
+            </div>
         </div>
-        <img class="image-container" src="Img/ut_log.png" alt="">
+        <div class="forms">
+            <div class="form-content">
+                <div class="login-form">
+                    <div class="title">Login</div>
+                    
+                    <form action="login_usuario_be.php" method="POST">
+                        <div class="input-boxes">
+                            <div class="input-box">
+                                <i class="fas fa-envelope"></i>
+                                <input type="text" placeholder="Usuario" name="correo">
+                            </div>
+                            <div class="input-box">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" placeholder="Contraseña" name="contrasena">
+                            </div>
+                            <div class="button input-box">
+                                <input type="submit" value="Sumbit">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-
 </body>
 
 </html>
