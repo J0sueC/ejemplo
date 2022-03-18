@@ -1,0 +1,13 @@
+#regla para evitar uso de .php 
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(,*)$ $1.php
+
+
+
+RewriteRule ^login$ Php/Login.php [L]
+RewriteRule ^inicio$ Php/inicio.php [L]
+RewriteRule ^encuesta$ Php/encuesta.php [L]
+RewriteRule ^login_usuario_be$ Php/login_usuario_be.php [L]
+RewriteRule ^addAsesores$ Php/AddAsesores.php [L]

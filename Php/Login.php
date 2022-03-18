@@ -26,7 +26,7 @@
                 <div class="login-form">
                     <div class="title">Login</div>
                     
-                    <form action="login_usuario_be.php" method="POST">
+                    <form action="login_usuario_be" method="POST">
                         <div class="input-boxes">
                             <div class="input-box">
                                 <i class="fas fa-envelope"></i>

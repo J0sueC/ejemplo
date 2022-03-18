@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
+    <link rel="shortcut icon" href="Img/favicon.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/Style_Enc.css">
+
 </head>
 
 <body>
@@ -42,10 +44,10 @@
                 <input type="text" class="input">
             </div>
             <div class="inputfield">
-            <label>Cuentas con lugar para estadias?</label>
+                <label>Cuentas con lugar para estadias?</label>
             </div>
             <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                
+
                 <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" onclick="mostrar();">
                 <label class="btn btn-outline-primary" for="btnradio1">Si</label>
 
@@ -100,29 +102,27 @@
             </div>
 
             <div class="inputfield">
-                <input type="submit" value="Ingresar" class="btn">
+                <a class="btn" href="inicio" role="button">Ingresar</a>
             </div>
 
         </div>
     </div>
-        <style>
-        #form1{
+    <style>
+        #form1 {
             display: none;
         }
+    </style>
+    <!-- Scripts -->
+    <script type="text/javascript">
+        function mostrar() {
+            document.getElementById('form1').style.display = 'block';
+        }
 
-        </style>
-<!-- Scripts -->
-<script type="text/javascript">
-    function mostrar(){
-        document.getElementById('form1').style.display = 'block';
-    }
+        function ocultar() {
+            document.getElementById('form1').style.display = 'none';
+        }
+    </script>
 
-    function ocultar(){
-        document.getElementById('form1').style.display = 'none';
-    }
-
-</script>
-    
 </body>
 
 </html>
