@@ -1,7 +1,17 @@
 <?php
 
-session_start();
+    session_start();
 
+    if(!isset($_SESSION['usuario'])){
+        echo '
+            <script> 
+                alert("Por favor debes iniciar sesion");
+                window.location = "login";
+            </script>
+        ';
+        session_destroy();
+        die();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,15 +31,13 @@ session_start();
    
 <?php include 'navbar.php' ?>
 
-
-
-
-
     <!-- ===== IONICONS ===== -->
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 
     <!-- ===== MAIN JS ===== -->
     <script src="Js/navbar.js"></script>
+
+    <!-- Mostrar el usuario <?php echo '<span>'.$_SESSION["usuario"].'</span>'; ?>  -->
 </body>
 
 </html>

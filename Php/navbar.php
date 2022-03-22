@@ -6,7 +6,7 @@
                     <a href="#" class="nav__logo">Ut</a>
                 </div>
                 <div class="nav__list">
-                    <a href="inicio.php" class="nav__link active">
+                    <a href="inicio" class="nav__link active">
                         <ion-icon name="home-outline" class="nav__icon"></ion-icon>
                         <span class="nav__name">Inicio</span>
                     </a>
