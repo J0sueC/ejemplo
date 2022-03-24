@@ -23,12 +23,14 @@
 
     <!-- ===== CSS ===== -->
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/table.css">
 
-    <title>Inicio</title>
+
+    <title>Alumnos</title>
+
 </head>
 
-<body id="body-pd">
-   
+<body id="body-pd"> 
 <div class="l-navbar" id="navbar">
         <nav class="nav">
             <div>
@@ -37,11 +39,11 @@
                     <a href="#" class="nav__logo">Ut</a>
                 </div>
                 <div class="nav__list">
-                    <a href="inicio" class="nav__link active">
+                    <a href="inicio" class="nav__link">
                         <ion-icon name="home-outline" class="nav__icon"></ion-icon>
                         <span class="nav__name">Inicio</span>
                     </a>
-                    <a href="agregar" class="nav__link">
+                    <a href="agregar" class="nav__link active">
                         <ion-icon name="chatbubbles-outline" class="nav__icon"></ion-icon>
                         <span class="nav__name">Registrar Alumnos</span>
                     </a>
@@ -84,8 +86,48 @@
         </nav>
     </div>
 
+    <div>
+        <form action="buscar.php" method="POST">
+            <input type="text" name="buscar" id="">
+            <input type="submit" Value="Buscar">
+            <a href="nuevo.php"></a>
+        </form>
+    </div>
+
+
+    <div class = "table-container">
+        <table class="table-rwd">
+            <tr>
+                <td>Id</td>
+                <td>Nombre</td>
+                <td>Usuario</td>
+                <td>Correo</td>
+                <td>Contraseña</td>
+                <td>Rol</td>
+            </tr>
+            <?php 
+                 include 'config.php';
+                 $sql = "SELECT id, nombre, usuario, correo, contrasena, id_cargo FROM usuarios order by id desc";
+                 $rta = mysqli_query($conn, $sql);
+                 while($mostrar = mysqli_fetch_row($rta)){
+                    ?>
+                    <tr>
+                        <td><?php echo $mostrar['0'] ?></td>
+                        <td><?php echo $mostrar['1'] ?></td>
+                        <td><?php echo $mostrar['2'] ?></td>
+                        <td><?php echo $mostrar['3'] ?></td>
+                        <td><?php echo $mostrar['4'] ?></td>
+                        <td><?php echo $mostrar['5'] ?></td>
+                    </tr>
+                    <?php                    
+                    }
+                    ?>
+        </table>
+    </div>
+
     <!-- ===== IONICONS ===== -->
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
 
     <!-- ===== MAIN JS ===== -->
     <script src="Js/navbar.js"></script>

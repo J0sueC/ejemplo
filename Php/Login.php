@@ -7,7 +7,6 @@
     }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -20,11 +19,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Img/favicon.png" type="image/x-icon">
-
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+    
 </head>
-
 <body>
     <div class="container">
         <input type="checkbox" id="flip">
@@ -58,5 +55,4 @@
         </div>
     </div>
 </body>
-
 </html>
