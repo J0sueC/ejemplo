@@ -10,8 +10,13 @@ $conn = mysqli_connect(DB_SERVER, DB_USERNAME,DB_PASSWORD,DB_NAME);
 
 /*
 if($conn){
-    echo 'conectado exitosamente a la bd';
+    echo '<script> 
+            alert("Conectado a la Base de Datos Correctamente");
+          </script>';
 }else
-echo ' no se a podido conectar a la bd';
+    echo '<script> 
+            alert("No se ha encontrado la Base De Datos");
+          </script>';
 */
+
 ?>

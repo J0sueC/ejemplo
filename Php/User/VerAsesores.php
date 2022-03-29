@@ -25,8 +25,7 @@
     <link rel="stylesheet" href="css/navbar.css">
     
 
-
-    <title>Alumnos</title>
+    <title>Ver Asesores</title>
 
 </head>
 
@@ -108,7 +107,7 @@
             </tr>
             <?php 
                  include 'config.php';
-                 $sql = "SELECT id, nombre, correo, apellidos, contrasena, id_cargo FROM asesores order by id desc";
+                 $sql = "SELECT id, nombre, correo, apellidos, contrasena, id_cargo FROM asesores order by id asc";
                  $rta = mysqli_query($conn, $sql);
                  while($mostrar = mysqli_fetch_row($rta)){
                     ?>

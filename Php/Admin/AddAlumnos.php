@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="css/table.css">
 
 
-    <title>Alumnos</title>
+    <title>Agregar Alumnos</title>
 
 </head>
 

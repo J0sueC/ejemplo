@@ -7,11 +7,13 @@ RewriteRule ^(,*)$ $1.php
 
 
 RewriteRule ^login$ Php/Login.php [L]
-RewriteRule ^inicio$ Php/inicio.php [L]
+RewriteRule ^inicio$ Php/User/inicio.php [L]
 RewriteRule ^encuesta$ Php/encuesta.php [L]
 RewriteRule ^login_usuario_be$ Php/login_usuario_be.php [L]
 RewriteRule ^addAsesores$ Php/AddAsesores.php [L]
 RewriteRule ^cerrar$ Php/CerrarSesion.php [L]
-RewriteRule ^agregar$ Php/AddAlumnos.php [L]
-RewriteRule ^VerAsesores$ Php/VerAsesores.php [L]
-RewriteRule ^AgregarAsesores$ Php/AgregarA.php [L]
+RewriteRule ^agregar$ Php/Admin/AddAlumnos.php [L]
+RewriteRule ^VerAsesores$ Php/Admin/VerAsesores.php [L]
+RewriteRule ^AgregarAsesores$ Php/Admin/AgregarA.php [L]
+RewriteRule ^admin$ Php/Admin/Admin.php [L]
+RewriteRule ^validar$ Php/validar.php [L]

@@ -35,15 +35,15 @@
                 <div class="login-form">
                     <div class="title">Login</div>
                     
-                    <form action="login_usuario_be" method="POST">
+                    <form action="validar" method="POST">
                         <div class="input-boxes">
                             <div class="input-box">
                                 <i class="fas fa-envelope"></i>
-                                <input type="text" placeholder="Usuario" name="correo">
+                                <input type="text" placeholder="Usuario" name="correo" id="correo">
                             </div>
                             <div class="input-box">
                                 <i class="fas fa-lock"></i>
-                                <input type="password" placeholder="Contraseña" name="contrasena">
+                                <input type="password" placeholder="Contraseña" name="contrasena" id= "pass">
                             </div>
                             <div class="button input-box">
                                 <input type="submit" value="Sumbit">
