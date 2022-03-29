@@ -18,8 +18,13 @@ session_start();
         header("location: ../admin");
 
     }else
-    if($filas['id_cargo']==2){ // Usuario
+    if($filas['id_cargo']==2){ // Alumno
         header("location: ../encuesta");
+    }
+    
+    else
+    if($filas['id_cargo']==3){ // Maestro
+        header("location: ../admin");
     } 
     
     else{

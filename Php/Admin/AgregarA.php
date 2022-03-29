@@ -31,103 +31,41 @@
 </head>
 
 <body id="body-pd"> 
-<div class="l-navbar" id="navbar">
-        <nav class="nav">
-            <div>
-                <div class="nav__brand">
-                    <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
-                    <a href="#" class="nav__logo">Ut</a>
+
+<?php 
+
+    include 'navbarA.php';
+?>
+
+<form action="registro" method="POST">
+            <div class="wrapper">
+                <div class="title">
+                    Agregar Asesores
                 </div>
-                <div class="nav__list">
-                    <a href="inicio" class="nav__link">
-                        <ion-icon name="home-outline" class="nav__icon"></ion-icon>
-                        <span class="nav__name">Inicio</span>
-                    </a>
-                    <a href="agregar" class="nav__link">
-                        <ion-icon name="chatbubbles-outline" class="nav__icon"></ion-icon>
-                        <span class="nav__name">Registrar Alumnos</span>
-                    </a>
-
-                    <div class="nav__link collapse active">
-                        <ion-icon name="folder-outline" class="nav__icon"></ion-icon>
-                        <span class="nav__name">Asesores</span>
-
-                        <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
-
-                        <ul class="collapse__menu">
-                            <a href="VerAsesores" class="collapse__sublink">Ver Asesores</a>
-                            <a href="AgregarAsesores" class="collapse__sublink">Agregar Asesores</a>
-                        </ul>
+                <div class="form">
+                    <div class="inputfield">
+                        <label>Nombre</label>
+                        <input type="text" class="input" name="txtnombre">
                     </div>
-
-                    <div class="nav__link collapse">
-                        <ion-icon name="people-outline" class="nav__icon"></ion-icon>
-                        <span class="nav__name">Team</span>
-
-                        <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
-
-                        <ul class="collapse__menu">
-                            <a href="#" class="collapse__sublink">Data</a>
-                            <a href="#" class="collapse__sublink">Group</a>
-                            <a href="#" class="collapse__sublink">Members</a>
-                        </ul>
+                    <div class="inputfield">
+                        <label>Apellido</label>
+                        <input type="text" class="input" name="txtapellido">
                     </div>
-                    <a href="#" class="nav__link">
-                        <ion-icon name="settings-outline" class="nav__icon"></ion-icon>
-                        <span class="nav__name">Settings</span>
-                    </a>
-                </div>
-            </div>
-
-            <a href="cerrar" class="nav__link">
-                <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
-                <span class="nav__name">Log Out</span>
-            </a>
-        </nav>
-    </div>
-
-    <div>
-        <form action="buscar.php" method="POST">
-            <input type="text" name="buscar" id="">
-            <input type="submit" Value="Buscar">
-            <a href="nuevo.php"></a>
+                    <div class="inputfield">
+                        <label>Correo</label>
+                        <input type="email" class="input" name="txtcorreo">
+                    </div>
+                    
+                    <div class="inputfield">
+                        <label>Contraseña</label>
+                        <input type="password" class="input" name="txtcontrasena">
+                    </div>
+                    <div class="inputfield">
+                        <label>rol</label>
+                        <input type="text" class="input" name="txtid_cargo">
+                    </div>
+                    <input type="submit" value="Registrar">
         </form>
-    </div>
-
-
-    <div>
-        <table border = "1">
-            <tr>
-                <td>Id</td>
-                <td>Nombre</td>
-                <td>Apellidos</td>
-                <td>Correo</td>
-                <td>Contraseña</td>
-                <td>Rol</td>
-                
- 
-            </tr>
-            <?php 
-                 include 'config.php';
-                 $sql = "SELECT id, nombre, correo, apellidos, contrasena, id_cargo FROM asesores order by id asc";
-                 $rta = mysqli_query($conn, $sql);
-                 while($mostrar = mysqli_fetch_row($rta)){
-                    ?>
-                    <tr>
-                        <td><?php echo $mostrar['0'] ?></td>
-                        <td><?php echo $mostrar['1'] ?></td>
-                        <td><?php echo $mostrar['2'] ?></td>
-                        <td><?php echo $mostrar['3'] ?></td>
-                        <td><?php echo $mostrar['4'] ?></td>
-                        <td><?php echo $mostrar['5'] ?></td>
-
-                    </tr>
-                    <?php                    
-                    }
-                    ?>
-        </table>
-    </div>
-
     <!-- ===== IONICONS ===== -->
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 
