@@ -46,7 +46,7 @@
                                 <input type="password" placeholder="Contraseña" name="contrasena" id= "pass">
                             </div>
                             <div class="button input-box">
-                                <input type="submit" value="Sumbit">
+                                <input type="submit" value="Ingresar">
                             </div>
                         </div>
                     </form>

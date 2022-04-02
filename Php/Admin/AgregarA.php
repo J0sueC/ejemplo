@@ -23,7 +23,7 @@
 
     <!-- ===== CSS ===== -->
     <link rel="stylesheet" href="css/navbar.css">
-    
+    <link rel="stylesheet" href="css/Form.css">
 
 
     <title>Agregar Asesores</title>
@@ -36,6 +36,8 @@
 
     include 'navbarA.php';
 ?>
+
+
 
 <form action="registro" method="POST">
             <div class="wrapper">
@@ -66,6 +68,8 @@
                     </div>
                     <input type="submit" value="Registrar">
         </form>
+
+
     <!-- ===== IONICONS ===== -->
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 

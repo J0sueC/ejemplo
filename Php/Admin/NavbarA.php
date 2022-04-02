@@ -35,7 +35,7 @@
                         </ul>
                     </div>
 
-                    <a href="#" class="nav__link">
+                    <a href="settings" class="nav__link">
                         <ion-icon name="settings-outline" class="nav__icon"></ion-icon>
                         <span class="nav__name">Settings</span>
                     </a>

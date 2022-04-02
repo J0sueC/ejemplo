@@ -9,6 +9,7 @@ RewriteRule ^(,*)$ $1.php
 RewriteRule ^login$ Php/Login.php [L]
 RewriteRule ^cerrar$ Php/CerrarSesion.php [L]
 RewriteRule ^validar$ Php/validar.php [L]
+RewriteRule ^cambiar$ Php/cambiar.php [L]
 
 #Admin
 RewriteRule ^admin$ Php/Admin/Admin.php [L]
@@ -19,7 +20,7 @@ RewriteRule ^VerAsesoresA$ Php/Admin/VerAsesoresA.php [L]
 RewriteRule ^registro$ Php/Admin/registro.php [L]
 RewriteRule ^VerAlumnosA$ Php/Admin/VerAlumnosA.php [L]
 RewriteRule ^registrar$ Php/Admin/registrarAlumnosA.php [L]
-
+RewriteRule ^settings$ Php/Admin/settingsA.php [L]
 
 
 #Alumnos
