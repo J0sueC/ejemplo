@@ -23,71 +23,35 @@
 
     <!-- ===== CSS ===== -->
     <link rel="stylesheet" href="css/navbar.css">
-    
+
     <link href="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.css" rel="stylesheet" type="text/css">
     <script src="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.js" type="text/javascript"></script>
-
-
+    
 
     <title>Ver Asesores</title>
 
 </head>
 
 <body id="body-pd"> 
-<div class="l-navbar" id="navbar">
-        <nav class="nav">
-            <div>
-                <div class="nav__brand">
-                    <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
-                    <a href="#" class="nav__logo">Ut</a>
-                </div>
-                <div class="nav__list">
-                    <a href="inicio" class="nav__link">
-                        <ion-icon name="home-outline" class="nav__icon"></ion-icon>
-                        <span class="nav__name">Inicio</span>
-                    </a>
+<?php 
 
-                    <div class="nav__link collapse active">
-                        <ion-icon name="people-outline" class="nav__icon"></ion-icon>
-                        <span class="nav__name">Asesores</span>
-
-                        <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
-
-                        <ul class="collapse__menu">
-                            <a href="VerAsesores" class="collapse__sublink">Ver Asesores</a>
-                        </ul>
-                    </div>
-
-                    <a href="#" class="nav__link">
-                        <ion-icon name="settings-outline" class="nav__icon"></ion-icon>
-                        <span class="nav__name">Settings</span>
-                    </a>
-                </div>
-            </div>
-
-            <a href="cerrar" class="nav__link">
-                <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
-                <span class="nav__name">Log Out</span>
-            </a>
-        </nav>
-    </div>
-
+    include 'navbarA.php';
+?>
 
     <div>
         <table id= "tabla" class="table table-bordered table-responsive">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Nombre</th>
-                    <th>Apellidos</th>
-                    <th>Correo</th>
-                    <th>Contraseña</th>
-                    <th>Rol</th>
-                </tr>
-            </thead>
+            <tr>
+                <td>Id</td>
+                <td>Nombre</td>
+                <td>Apellido Paterno</td>
+                <td>Apellido Materno</td>
+                <td>Correo</td>
+                <td>Rol</td>
+ 
+            </tr>
             <?php 
                  include '../config.php';
-                 $sql = "SELECT id, nombre, correo, apellidos, contrasena, id_cargo FROM asesores order by id asc";
+                 $sql = "SELECT id, nombre, apellido_paterno, apellido_materno, correo, id_cargo FROM alumnos order by id asc";
                  $rta = mysqli_query($conn, $sql);
                  while($mostrar = mysqli_fetch_row($rta)){
                     ?>
@@ -98,6 +62,7 @@
                         <td><?php echo $mostrar['3'] ?></td>
                         <td><?php echo $mostrar['4'] ?></td>
                         <td><?php echo $mostrar['5'] ?></td>
+                
 
                     </tr>
                     <?php                    
@@ -113,7 +78,7 @@
     <!-- ===== MAIN JS ===== -->
     <script src="Js/navbar.js"></script>
 
-        <script>
+    <script>
             var tabla = document.querySelector("#tabla");
             var dataTable = new DataTable(tabla);
         </script>

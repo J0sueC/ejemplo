@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 29, 2022 at 03:54 PM
+-- Generation Time: Apr 02, 2022 at 06:10 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -44,7 +44,9 @@ CREATE TABLE `alumnos` (
 INSERT INTO `alumnos` (`id`, `nombre`, `apellido_paterno`, `apellido_materno`, `correo`, `id_cargo`) VALUES
 (1, 'Josue', 'Cardona', 'Velazquez', 'example@mail.com', 1),
 (3, 'Alejandro', 'Martinez', 'Muñoz', 'Ale1@gmail.com', 1),
-(4, 'Alejandro', 'Martinez', 'Martinez', 'martinez@mail.com', 2);
+(4, 'Alejandro', 'Martinez', 'Martinez', 'martinez@mail.com', 2),
+(5, 'manuel', 'sanchez', 'moreno', 'manuel@gmial.com', 2),
+(6, 'Juan', 'Martinez', 'Perez', 'juan@gmail.com', 3);
 
 -- --------------------------------------------------------
 
@@ -110,7 +112,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `usuario`, `correo`, `contrasena`, `id_cargo`) VALUES
-(1, 'Josue Cardona Velazquez', 'Josue', 'example@mail.com', '12345', 1),
+(1, 'Josue Cardona Velazquez', 'Josue', 'example@mail.com', '12345', 2),
 (2, 'Juan Perez Martinez', 'Juan P', 'example2@mail.com', '12345', 1);
 
 --
@@ -152,7 +154,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `alumnos`
 --
 ALTER TABLE `alumnos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `asesores`

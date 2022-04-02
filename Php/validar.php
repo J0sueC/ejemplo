@@ -34,6 +34,8 @@ session_start();
             window.location = "login"
         </script>
     ';
+    session_destroy();
+    die();
     exit();
     }
 

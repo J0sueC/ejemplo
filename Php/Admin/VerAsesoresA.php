@@ -23,6 +23,10 @@
 
     <!-- ===== CSS ===== -->
     <link rel="stylesheet" href="css/navbar.css">
+
+    <link href="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.css" rel="stylesheet" type="text/css">
+    <script src="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.js" type="text/javascript"></script>
+
     
 
     <title>Ver Asesores</title>
@@ -36,19 +40,18 @@
 ?>
 
     <div>
-        <table border = "1">
+        <table id= "tabla" class="table table-bordered table-responsive">
             <tr>
                 <td>Id</td>
                 <td>Nombre</td>
                 <td>Apellidos</td>
                 <td>Correo</td>
-                <td>Contraseña</td>
                 <td>Rol</td>
  
             </tr>
             <?php 
                  include '../config.php';
-                 $sql = "SELECT id, nombre, correo, apellidos, contrasena, id_cargo FROM asesores order by id asc";
+                 $sql = "SELECT id, nombre, apellidos, correo, id_cargo FROM asesores order by id asc";
                  $rta = mysqli_query($conn, $sql);
                  while($mostrar = mysqli_fetch_row($rta)){
                     ?>
@@ -58,7 +61,7 @@
                         <td><?php echo $mostrar['2'] ?></td>
                         <td><?php echo $mostrar['3'] ?></td>
                         <td><?php echo $mostrar['4'] ?></td>
-                        <td><?php echo $mostrar['5'] ?></td>
+                
 
                     </tr>
                     <?php                    
@@ -73,6 +76,11 @@
 
     <!-- ===== MAIN JS ===== -->
     <script src="Js/navbar.js"></script>
+
+    <script>
+            var tabla = document.querySelector("#tabla");
+            var dataTable = new DataTable(tabla);
+        </script>
 
     <!-- Mostrar el usuario <?php echo '<span>'.$_SESSION["usuario"].'</span>'; ?>  -->
 </body>

@@ -10,13 +10,21 @@
                         <ion-icon name="home-outline" class="nav__icon"></ion-icon>
                         <span class="nav__name">Inicio</span>
                     </a>
-                    <a href="agregar" class="nav__link">
-                        <ion-icon name="chatbubbles-outline" class="nav__icon"></ion-icon>
-                        <span class="nav__name">Registrar Alumnos</span>
-                    </a>
 
                     <div class="nav__link collapse">
-                        <ion-icon name="folder-outline" class="nav__icon"></ion-icon>
+                        <ion-icon name="people-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Alumnos</span>
+
+                        <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
+
+                        <ul class="collapse__menu">
+                            <a href="VerAlumnosA" class="collapse__sublink">Ver Alumnos</a>
+                            <a href="agregar" class="collapse__sublink">Agregar Alumnos</a>
+                        </ul>
+                    </div>
+
+                    <div class="nav__link collapse">
+                        <ion-icon name="people-outline" class="nav__icon"></ion-icon>
                         <span class="nav__name">Asesores</span>
 
                         <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
