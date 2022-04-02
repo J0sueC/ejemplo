@@ -24,7 +24,7 @@ session_start();
     
     else
     if($filas['id_cargo']==3){ // Maestro
-        header("location: ../admin");
+        header("location: ../maestro");
     } 
     
     else{

@@ -27,7 +27,7 @@ if(!isset($_SESSION['usuario'])){
     
 
 
-    <title>Admin</title>
+    <title>Maestro</title>
 
 </head>
 
@@ -35,7 +35,7 @@ if(!isset($_SESSION['usuario'])){
 
 <?php 
 
-    include 'navbarA.php';
+    include 'navbarM.php';
 ?>
 
     <!-- ===== IONICONS ===== -->

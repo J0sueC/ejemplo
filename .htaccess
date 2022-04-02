@@ -28,9 +28,12 @@ RewriteRule ^inicio$ Php/User/inicio.php [L]
 RewriteRule ^encuesta$ Php/encuesta.php [L]
 RewriteRule ^VerAsesores$ Php/User/VerAsesores.php [L]
 RewriteRule ^subir$ Php/User/subir.php [L]
-RewriteRule ^tabla$ Php/User/tabla.php [L]
 
 #Maestro
+RewriteRule ^maestro$ Php/Maestro/Maestro.php [L]
+RewriteRule ^navbarM$ Php/Maestro/navbarM.php [L]
+RewriteRule ^VerAlumnosM$ Php/Maestro/VerAlumnosM.php [L]
+RewriteRule ^VerAsesoresM$ Php/Maestro/VerAsesoresM.php [L]
 
 
 
