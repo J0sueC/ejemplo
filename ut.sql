@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 04, 2022 at 05:22 AM
+-- Generation Time: Apr 04, 2022 at 04:07 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -118,6 +118,13 @@ CREATE TABLE `tb_contrato_laboral` (
   `name` varchar(200) CHARACTER SET latin1 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `tb_contrato_laboral`
+--
+
+INSERT INTO `tb_contrato_laboral` (`id`, `fname`, `name`) VALUES
+(1, '20220404160506_Diagrama de Gantt Ut.mpp', 'Diagrama de Gantt Ut.mpp');
+
 -- --------------------------------------------------------
 
 --
@@ -129,6 +136,13 @@ CREATE TABLE `tb_control_seguimiento` (
   `fname` text CHARACTER SET latin1 NOT NULL,
   `name` varchar(200) CHARACTER SET latin1 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tb_control_seguimiento`
+--
+
+INSERT INTO `tb_control_seguimiento` (`id`, `fname`, `name`) VALUES
+(1, '20220404142729_Diagrama de Gantt Ut.mpp', 'Diagrama de Gantt Ut.mpp');
 
 -- --------------------------------------------------------
 
@@ -283,19 +297,19 @@ ALTER TABLE `rol`
 -- AUTO_INCREMENT for table `tbl_comentarios`
 --
 ALTER TABLE `tbl_comentarios`
-  MODIFY `co_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `co_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tb_contrato_laboral`
 --
 ALTER TABLE `tb_contrato_laboral`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tb_control_seguimiento`
 --
 ALTER TABLE `tb_control_seguimiento`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tb_entrevista_final`
@@ -319,7 +333,7 @@ ALTER TABLE `upload`
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables

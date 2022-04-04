@@ -39,6 +39,11 @@ RewriteRule ^maestro$ Php/Maestro/Maestro.php [L]
 RewriteRule ^navbarM$ Php/Maestro/navbarM.php [L]
 RewriteRule ^VerAlumnosM$ Php/Maestro/VerAlumnosM.php [L]
 RewriteRule ^VerAsesoresM$ Php/Maestro/VerAsesoresM.php [L]
+RewriteRule ^verControl$ Php/Maestro/VerControlySeguimientoM.php [L]
+RewriteRule ^verAvance$ Php/Maestro/VerReporteAvanceM.php [L]
+RewriteRule ^verReporteFinal$ Php/Maestro/VerReporteFinalM.php [L]
+RewriteRule ^verEntrevista$ Php/Maestro/VerEntrevistaM.php [L]
+RewriteRule ^verContrato$ Php/Maestro/VerContratoM.php [L]
 
 
 

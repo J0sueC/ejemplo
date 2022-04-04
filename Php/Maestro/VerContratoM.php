@@ -70,7 +70,7 @@ if(isset($_POST['submit'])!=""){
     
 
 
-    <title>Maestro</title>
+    <title>Contrato Laboral</title>
 
 </head>
 
@@ -81,12 +81,61 @@ if(isset($_POST['submit'])!=""){
     include 'navbarM.php';
 ?>
 
-<?php
+<div>
+            <table id="tabla" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Descargar</th>
+                        <th>Visualizar</th>
+                    </tr>
+                </thead>
+                <?php
+                            $query=$conn1->query("select * from tb_contrato_laboral order by id desc");
+                            
+                                    while($row=$query->fetch()){
+                                        $name=$row['name'];
+        
+                        ?>
+                    <tbody>
+                    <tr>
+                    
 
-include 'cardsM.php';
 
-?>
+                       <td>
+                &nbsp;<?php echo $name ;?>
+            </td>
+            <td>
+                <button class="alert-success"><a href="../../subir.php?filename=<?php echo $name;?>&f=<?php echo $row['fname'] ?>">Descargar</a></button>
+            </td>
+            <td>   
+                     <button class= "fas fa-eye" onclick="document.getElementById('id01').style.display='block'"></button>
+            </td>
+                    
+                    </tr>
+                    <?php                    
+                    }
+                
+                    ?>
+                </tbody>
+            </table>
+        </div>
 
+<!-- The Modal -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container">
+      <span onclick="document.getElementById('id01').style.display='none'"
+      class="w3-button w3-display-topright">&times;</span>
+      <div class="w3-container">
+        <h2>Archivos</h2>
+        </div>
+                <?php
+                    $sql
+                ?>
+    </div>
+  </div>
+</div>
 
 
     <!-- ===== IONICONS ===== -->
@@ -97,7 +146,12 @@ include 'cardsM.php';
     <script src="Js/navbar.js"></script>
     <script src="Js/gestor.js"></script>
 
+    <script>
+            var tabla = document.querySelector("#tabla");
+            var dataTable = new DataTable(tabla);
+        </script>
 
+    <!-- Mostrar el usuario <?php echo '<span>'.$_SESSION["usuario"].'</span>'; ?>  -->
 </body>
 
 </html>
