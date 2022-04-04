@@ -39,47 +39,47 @@
     include 'navbarA.php';
 ?>
 
-        <div>
-            <table id="tabla" class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Nombre</th>
-                        <th>Apellidos</th>
-                        <th>Correo</th>
-                        <th>Rol</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php 
-                 include '../config.php';
-                 $sql = "SELECT id, nombre, apellidos, correo, id_cargo FROM asesores order by id asc";
-                 $rta = mysqli_query($conn, $sql);
-                 while($mostrar = mysqli_fetch_row($rta)){
-                    ?>
-                    <tr>
-                        <td>
-                            <?php echo $mostrar['0'] ?>
-                        </td>
-                        <td>
-                            <?php echo $mostrar['1'] ?>
-                        </td>
-                        <td>
-                            <?php echo $mostrar['2'] ?>
-                        </td>
-                        <td>
-                            <?php echo $mostrar['3'] ?>
-                        </td>
-                        <td>
-                            <?php echo $mostrar['4'] ?>
-                        </td>
-                    </tr>
-                    <?php                    
-                    }
-                    ?>
-                </tbody>
-            </table>
-        </div>
+            <div>
+                <table id="tabla" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>Apellidos</th>
+                            <th>Correo</th>
+                            <th>Rol</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php 
+                    include '../config.php';
+                    $sql = "SELECT id, nombre, apellidos, correo, id_cargo FROM asesores order by id asc";
+                    $rta = mysqli_query($conn, $sql);
+                    while($mostrar = mysqli_fetch_row($rta)){
+                        ?>
+                        <tr>
+                            <td>
+                                <?php echo $mostrar['0'] ?>
+                            </td>
+                            <td>
+                                <?php echo $mostrar['1'] ?>
+                            </td>
+                            <td>
+                                <?php echo $mostrar['2'] ?>
+                            </td>
+                            <td>
+                                <?php echo $mostrar['3'] ?>
+                            </td>
+                            <td>
+                                <?php echo $mostrar['4'] ?>
+                            </td>
+                        </tr>
+                        <?php                    
+                        }
+                        ?>
+                    </tbody>
+                </table>
+            </div>
 
         <!-- ===== IONICONS ===== -->
         <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
