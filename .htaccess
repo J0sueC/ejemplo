@@ -27,7 +27,12 @@ RewriteRule ^settings$ Php/Admin/settingsA.php [L]
 RewriteRule ^inicio$ Php/User/inicio.php [L]
 RewriteRule ^encuesta$ Php/encuesta.php [L]
 RewriteRule ^VerAsesores$ Php/User/VerAsesores.php [L]
-RewriteRule ^subir$ Php/User/subir.php [L]
+RewriteRule ^subirControl$ Php/User/SubirControlySeguimiento.php [L]
+RewriteRule ^subirAvance$ Php/User/SubirReporteAvance.php [L]
+RewriteRule ^subirReporteFinal$ Php/User/SubirReporteFinal.php [L]
+RewriteRule ^SubirEntrevista$ Php/User/SubirEntrevista.php [L]
+RewriteRule ^SubirContrato$ Php/User/SubirContrato.php [L]
+
 
 #Maestro
 RewriteRule ^maestro$ Php/Maestro/Maestro.php [L]

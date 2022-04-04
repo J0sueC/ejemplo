@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 02, 2022 at 06:10 PM
+-- Generation Time: Apr 04, 2022 at 05:22 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -95,6 +95,80 @@ INSERT INTO `rol` (`id`, `descripcion`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_comentarios`
+--
+
+CREATE TABLE `tbl_comentarios` (
+  `co_id` int(11) NOT NULL,
+  `parent_id` int(11) DEFAULT NULL,
+  `comentarios` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `comentario_nombre` varchar(40) CHARACTER SET utf8 NOT NULL,
+  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_contrato_laboral`
+--
+
+CREATE TABLE `tb_contrato_laboral` (
+  `id` int(11) NOT NULL,
+  `fname` text CHARACTER SET latin1 NOT NULL,
+  `name` varchar(200) CHARACTER SET latin1 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_control_seguimiento`
+--
+
+CREATE TABLE `tb_control_seguimiento` (
+  `id` int(11) NOT NULL,
+  `fname` text CHARACTER SET latin1 NOT NULL,
+  `name` varchar(200) CHARACTER SET latin1 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_entrevista_final`
+--
+
+CREATE TABLE `tb_entrevista_final` (
+  `id` int(11) NOT NULL,
+  `fname` text CHARACTER SET latin1 NOT NULL,
+  `name` varchar(200) CHARACTER SET latin1 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_reporte_avance`
+--
+
+CREATE TABLE `tb_reporte_avance` (
+  `id` int(11) NOT NULL,
+  `fname` text CHARACTER SET latin1 NOT NULL,
+  `name` varchar(200) CHARACTER SET latin1 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `upload`
+--
+
+CREATE TABLE `upload` (
+  `id` int(11) NOT NULL,
+  `fname` text NOT NULL,
+  `name` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `usuarios`
 --
 
@@ -113,7 +187,8 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `nombre`, `usuario`, `correo`, `contrasena`, `id_cargo`) VALUES
 (1, 'Josue Cardona Velazquez', 'Josue', 'example@mail.com', '12345', 2),
-(2, 'Juan Perez Martinez', 'Juan P', 'example2@mail.com', '12345', 1);
+(2, 'Juan Perez Martinez', 'Juan P', 'example2@mail.com', '12345', 3),
+(3, 'Adrian Garza', 'Admin', 'admin@mail.com', '12345', 1);
 
 --
 -- Indexes for dumped tables
@@ -138,6 +213,42 @@ ALTER TABLE `asesores`
 ALTER TABLE `rol`
   ADD PRIMARY KEY (`id`),
   ADD KEY `descripcion` (`descripcion`);
+
+--
+-- Indexes for table `tbl_comentarios`
+--
+ALTER TABLE `tbl_comentarios`
+  ADD PRIMARY KEY (`co_id`);
+
+--
+-- Indexes for table `tb_contrato_laboral`
+--
+ALTER TABLE `tb_contrato_laboral`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tb_control_seguimiento`
+--
+ALTER TABLE `tb_control_seguimiento`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tb_entrevista_final`
+--
+ALTER TABLE `tb_entrevista_final`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tb_reporte_avance`
+--
+ALTER TABLE `tb_reporte_avance`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `upload`
+--
+ALTER TABLE `upload`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `usuarios`
@@ -169,10 +280,46 @@ ALTER TABLE `rol`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `tbl_comentarios`
+--
+ALTER TABLE `tbl_comentarios`
+  MODIFY `co_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `tb_contrato_laboral`
+--
+ALTER TABLE `tb_contrato_laboral`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `tb_control_seguimiento`
+--
+ALTER TABLE `tb_control_seguimiento`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tb_entrevista_final`
+--
+ALTER TABLE `tb_entrevista_final`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tb_reporte_avance`
+--
+ALTER TABLE `tb_reporte_avance`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `upload`
+--
+ALTER TABLE `upload`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables

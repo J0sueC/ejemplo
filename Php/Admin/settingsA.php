@@ -79,7 +79,6 @@
 
     
 
-        <!-- Mostrar el usuario <?php echo '<span>'.$_SESSION["usuario"].'</span>'; ?>  -->
     </body>
 
     </html>
